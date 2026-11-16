@@ -1,0 +1,56 @@
+{
+  "rules": [
+    {
+      "name": "auth-failures",
+      "match": {
+        "apps": ["sshd"],
+        "regex": "Failed password"
+      },
+      "action": {
+        "counter": "auth_failures",
+        "store": true
+      }
+    },
+    {
+      "name": "firewall-denies",
+      "match": {
+        "hosts": ["fw-*.example"],
+        "regex": "BLOCKED|denied"
+      },
+      "action": {
+        "counter": "firewall_denies",
+        "file": "out/denied-events.log"
+      }
+    },
+    {
+      "name": "critical-alerts",
+      "match": {
+        "severity_max": 1
+      },
+      "action": {
+        "counter": "crit_alerts"
+      }
+    },
+    {
+      "name": "cron-jobs",
+      "match": {
+        "apps": ["CRON"]
+      },
+      "action": {
+        "counter": "cron_jobs"
+      }
+    },
+    {
+      "name": "drop-debug-noise",
+      "match": {
+        "apps": ["app"],
+        "regex": "^DEBUG "
+      },
+      "action": {
+        "drop": true,
+        "store": false
+      },
+      "stop": true
+    }
+  ]
+}

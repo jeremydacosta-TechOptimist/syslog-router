@@ -1,0 +1,30 @@
+<165>1 2026-03-01T22:14:15.003Z fw-edge-01.example trafficmon - - [lab@32473 action="deny" src="192.0.2.10" dst="198.51.100.20"] BLOCKED TCP 192.0.2.10:51515 -> 198.51.100.20:443
+<165>1 2026-03-01T22:14:16.118Z fw-edge-01.example trafficmon - - [lab@32473 action="deny" src="203.0.113.7" dst="192.0.2.53"] BLOCKED UDP 203.0.113.7:5353 -> 192.0.2.53:53
+<165>1 2026-03-01T22:14:17.442Z fw-edge-01.example trafficmon - - [lab@32473 action="allow" src="192.0.2.20" dst="198.51.100.5"] PERMITTED TCP 192.0.2.20:44002 -> 198.51.100.5:443
+<38>1 2026-03-01T22:15:02.871Z auth-srv-01.example sshd 1421 - - Failed password for invalid user admin from 203.0.113.7 port 51022 ssh2
+<38>1 2026-03-01T22:15:04.012Z auth-srv-01.example sshd 1421 - - Failed password for root from 203.0.113.7 port 51023 ssh2
+<38>1 2026-03-01T22:15:09.550Z auth-srv-01.example sshd 1421 - - Accepted publickey for lab from 192.0.2.44 port 51024 ssh2
+<2>1 2026-03-01T22:20:00.500Z db-srv-01.example kernel - - - EXT4-fs error (device sdb1): unable to read superblock
+<134>1 2026-03-01T22:21:30.000Z app-srv-01.example app 1700 - - DEBUG heartbeat ok seq=1
+<134>1 2026-03-01T22:21:31.000Z app-srv-01.example app 1700 - - DEBUG heartbeat ok seq=2
+<134>1 2026-03-01T22:21:35.000Z app-srv-01.example app 1700 - - INFO worker pool healthy workers=4
+<34>Mar  1 22:16:10 auth-srv-01.example sshd[1503]: Failed password for root from 203.0.113.7 port 51023 ssh2
+<86>Mar  1 22:17:00 db-srv-01.example CRON[1601]: (root) CMD (/usr/local/bin/backup.sh)
+<86>Mar  1 22:17:01 db-srv-01.example CRON[1601]: (root) CMD (/usr/local/bin/rotate.sh)
+<86>Mar  1 22:18:00 db-srv-01.example CRON[1610]: (root) CMD (/usr/local/bin/healthcheck.sh)
+<13>Mar  1 22:18:30 db-srv-01.example systemd[1]: Started Daily apt upgrade.
+<30>Mar  1 22:18:45 db-srv-01.example sudo: lab : TTY=pts/0 ; PWD=/home/lab ; USER=root ; COMMAND=/bin/systemctl restart nginx
+<187>Mar  1 22:19:10 core-sw-01.example kernel: CRITICAL temperature sensor 2 at 78C
+<39>Mar  1 22:19:30 auth-srv-01.example sshd[1503]: Failed password for invalid user test from 203.0.113.44 port 51044 ssh2
+<38>Mar  1 22:20:15 fw-edge-01.example firewalld[900]: BLOCKED inbound tcp 203.0.113.5:44444 -> 192.0.2.80:22 rule=WAN-IN
+<134>Mar  1 22:21:00 app-srv-01.example app[1700]: DEBUG cache sweep entries=120
+<189>*Mar  1 22:18:12.345: core-sw-01.example %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to down
+<189>*Mar  1 22:18:30.001: core-sw-01.example %SEC-6-IPACCESSLOGP: list 101 denied tcp 192.0.2.77(44821) -> 203.0.113.9(22), 1 packet
+<188>*Mar  1 22:19:00.123: edge-rtr-01.example %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+<190>*Mar  1 22:19:30.500: core-sw-01.example %SYS-5-CONFIG_I: Configured from console by lab on vty0 (192.0.2.44)
+<189>32: core-sw-01.example: %LINK-3-UPDOWN: Interface GigabitEthernet0/3, changed state to up
+<189>*Mar  1 22:20:30.000: fw-edge-02.example %SEC-6-IPACCESSLOGP: list WAN-IN denied tcp 203.0.113.66(51234) -> 198.51.100.20(22), 1 packet
+lab-gateway startup complete without syslog priority
+<9>Mar  1 22:22:00 lab-monitor.example ping-monitor: host 192.0.2.1 unreachable after 3 probes
+<0>Mar  1 22:22:30 lab-monitor.example ping-monitor: EMERGENCY link failure on uplink 0
+<191>Mar  1 22:23:00 app-srv-01.example app[1700]: DEBUG startup banner
