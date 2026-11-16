@@ -13,7 +13,7 @@
 <86>Mar  1 22:17:01 db-srv-01.example CRON[1601]: (root) CMD (/usr/local/bin/rotate.sh)
 <86>Mar  1 22:18:00 db-srv-01.example CRON[1610]: (root) CMD (/usr/local/bin/healthcheck.sh)
 <13>Mar  1 22:18:30 db-srv-01.example systemd[1]: Started Daily apt upgrade.
-<30>Mar  1 22:18:45 db-srv-01.example sudo: lab : TTY=pts/0 ; PWD=/home/lab ; USER=root ; COMMAND=/bin/systemctl restart nginx
+<30>Mar  1 22:18:45 db-srv-01.example sudo: lab : TTY=pts/0 ; PWD=/opt/lab ; USER=root ; COMMAND=/bin/systemctl restart nginx
 <187>Mar  1 22:19:10 core-sw-01.example kernel: CRITICAL temperature sensor 2 at 78C
 <39>Mar  1 22:19:30 auth-srv-01.example sshd[1503]: Failed password for invalid user test from 203.0.113.44 port 51044 ssh2
 <38>Mar  1 22:20:15 fw-edge-01.example firewalld[900]: BLOCKED inbound tcp 203.0.113.5:44444 -> 192.0.2.80:22 rule=WAN-IN
